@@ -13,6 +13,7 @@ import json
 class NoColorExistsError(Exception):
     pass
 
+
 def get_color_code(color_name) -> Optional[str]:
     # this is where you should add your logic to check the color.
     # Open the file at data/css-color-names.json, and return the hex code
@@ -26,5 +27,4 @@ def get_color_code(color_name) -> Optional[str]:
             hex_code = color_list[color_name]
         else:
             raise NoColorExistsError
-        
     return hex_code

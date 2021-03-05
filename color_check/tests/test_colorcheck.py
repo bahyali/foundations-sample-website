@@ -33,7 +33,5 @@ def test_index():
 # check that there is a route at "/colors" which accepts a POST request
 def test_colors():
     with app.test_client() as test_client:
-        response = test_client.post('/color', data=dict(
-            color=''
-    ))
+        response = test_client.post('/color', data=dict(color=''))
         assert response.status_code == 200
