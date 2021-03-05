@@ -9,6 +9,23 @@ body {
     margin-bottom: 1rem;
 }
 
+.square {
+    width: 150px;
+    height: 150px;
+}
+
+.errors {
+    list-style: none;
+    padding: 0;
+}
+
+.errors li {
+    border: 1px solid red;
+    background-color: rosybrown;
+    padding: 10px;
+    color: #522020;
+}
+
 footer {
     margin-top: 5rem;
     text-align: center;
