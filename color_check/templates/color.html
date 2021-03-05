@@ -1,7 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <p> Edit this file to show the name of the color and to render a square of that color itself! 
-    </p>
+{% if errors | length %}
+    <ul class="errors">
+        {% for error in errors %}
+            <li>{{error}}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+{% if color_hex_code %}
+    <ul>
+        <li>Code: {{color}}</li>
+        <li>Color Code: {{color_hex_code}}</li>
+    </ul>
+    <div class="square" style="background:{{color_hex_code}}"></div>
+{% endif %}
 
 {% endblock %}
